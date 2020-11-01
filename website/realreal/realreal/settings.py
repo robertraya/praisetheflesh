@@ -20,10 +20,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5aml5dw%az1rw%80-wm6*82sw7kz5wbon$ryyh-6q^#ku_1enj'
+# CHANGING TO MOVE SECRET KEY TO FILE
+with open('/Users/robertraya/Desktop/secret_key.rtf') as f:
+	SECRET_KEY = f.read().strip()
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -125,3 +128,22 @@ STATICFILES_DIRS = [
     
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Security settings
+# helps protect against cross site scripting
+SECURE_BROWSER_XSS_FILTER = True
+
+SESSION_COOKIE_SECURE = True
+
+CSRF_COOKIE_SECURE = True
+
+#length of time to specify in the header, may need to slowly ramp up making sure nothing breaks each time, up to one year (in seconds)
+SECURE_HSTS_SECONDS = 30
+
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+SECURE_SSL_REDIRECT = True
+
+SECURE_HSTS_PRELOAD = True
+
+SECURE_REFERRER_POLICY =  "no-referrer-when-downgrade"
