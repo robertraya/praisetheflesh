@@ -1,1 +1,1 @@
-web: django
+web: web: gunicorn realreal.wsgi
