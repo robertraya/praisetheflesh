@@ -1,1 +1,1 @@
-web: web: gunicorn realreal.wsgi
+web: gunicorn realreal.wsgi
