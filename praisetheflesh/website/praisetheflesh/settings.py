@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'praisetheflesh.wsgi.application'
+WSGI_APPLICATION = 'realreal.wsgi.application'
 
 
 # Database
