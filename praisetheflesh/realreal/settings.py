@@ -34,7 +34,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'realreal',
+    'praisetheflesh.PraisetheFleshConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'realreal.wsgi.application'
+WSGI_APPLICATION = 'praisetheflesh.wsgi.application'
 
 
 # Database
