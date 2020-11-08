@@ -34,7 +34,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'praisetheflesh.PraisetheFleshConfig',
+    'praisethefles.apps.PraisetheFleshConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
